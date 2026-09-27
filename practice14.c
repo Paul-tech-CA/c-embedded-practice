@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-bool isTemperatureHeigh(int temperature)
+bool isTemperatureHigh(int temperature)
 {
     if(temperature >= 70)
     {
@@ -15,7 +15,7 @@ bool isTemperatureHeigh(int temperature)
 
 bool shouldFanRun(int temperature, bool fanEnabled)
 {
-    if(isTemperatureHeigh(temperature) && fanEnabled)
+    if(isTemperatureHigh(temperature) && fanEnabled)
     {
         return true;
     }
@@ -37,7 +37,7 @@ void printFanStatus(bool fanRunning)
     }
 }
 
-int main()
+int main(void)
 {
     int temperature;
     int fanEnabledInput;
